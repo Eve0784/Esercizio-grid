@@ -1,0 +1,96 @@
+*{
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+html,body{
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    display: grid;
+    grid-template-rows: 10vh 5vh 80vh 20vh 10vh;
+    grid-template-columns:repeat(4,25vw);
+    grid-template-areas:
+    "header header header header"
+    "menu menu menu menu"
+    "main1 main1 main2 main2"
+    "quadro1 quadro2 quadro3 quadro4"
+    "footer1 footer1  footer2 footer2";
+    background-color: antiquewhite;
+}
+.area-header{
+    grid-area: header;
+    background-color: aqua;
+}
+.area-menu{
+    grid-area: menu;
+    background-color: aquamarine;
+}
+.area-main1{
+    grid-area: main1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". quadro-main1 ."
+    ". . . ";
+    background-color: bisque;
+}
+.area-main2{
+    grid-area: main2;
+    display: grid;
+     grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "quadro1-main2 . quadro2-main2"
+    ". . . "
+    "quadro3-main2 . quadro4-main2";
+    background-color: chocolate;
+ 
+}
+.area-quadro1{
+    grid-area: quadro1;
+    background-color: cadetblue;
+}
+.area-quadro2{
+    grid-area: quadro2;
+    background-color: crimson;
+}
+.area-quadro3{
+    grid-area: quadro3;
+    background-color: cornflowerblue;
+}
+.area-quadro4{
+    grid-area: quadro4;
+    background-color: darkblue;
+}
+.area-footer1{
+    grid-area: footer1;
+    background-color: darkcyan;
+}
+.area-footer2{
+    grid-area: footer2;
+    background-color: darkorange;
+}
+.area-quadro-main1{
+    grid-area: quadro-main1;
+    background-color: darkgrey;
+}
+.area-quadro1-main2{
+    grid-area: quadro1-main2;
+    background-color: darkorchid;
+}
+.area-quadro2-main2{
+    grid-area: quadro2-main2;
+    background-color: deeppink;
+}
+.area-quadro3-main2{
+    grid-area: quadro3-main2;
+    background-color: dimgrey;
+}
+.area-quadro4-main2{
+    grid-area: quadro4-main2;
+    background-color: darkslategrey;
+}
